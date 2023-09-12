@@ -47,7 +47,8 @@ FROM coviddeaths
 WHERE country = 'Nigeria'
 ORDER BY 1,2
 ```
-```picture of qurey result```
+![death percentages ng](https://github.com/niola-liberty/covid-sql-project/assets/82907562/4cb96eb0-f062-431a-a98d-18b1363d5759)
+
 
 ```sql
 -- Example SQL Query 1: Calculate total COVID-19 cases by country
