@@ -15,7 +15,7 @@ A lot has happened since the covid outbreak in 2020, and ever since the vaccince
 ### Getting Started
 
 If you'd like to run my queries, you can download the datasets in the repository and perform your analysis on a Postgres server. After installing postgreSQL and pgAdmin, you'll have to create tables to house the datasets. The code for the table should look something like this
-```
+```sql
 CREATE TABLE CovidDeaths (
 	iso_code VARCHAR,
 	continent VARCHAR,
