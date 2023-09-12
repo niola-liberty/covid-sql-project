@@ -1,34 +1,53 @@
-# covid-sql-project
+# Sql Analysis On The Covid 19 World Data
 
-Writing a README file for your SQL queries and COVID-19 analysis can help others understand your work and how to use it. Here's a basic template and guidance on what to include in your README:
-
-### Project Name
-
-Provide a concise, informative title for your project.
 
 ### Description
 
-Give a brief overview of what your project is about. Explain the purpose and goals of your SQL queries and COVID-19 analysis.
+A lot has happened since the covid outbreak in 2020, and ever since the vaccinces were out, the pandemic itself has become a thing of the past. This project is aims to gather information on the severity of the pandemic across the globe and especially Nigeria. We'll figure out chances of dying if you contact covid, death percentages, cummulative sum of vaccinated people verses the population and lots more.
 
-### Table of Contents
-
-If your README is lengthy, consider including a table of contents to help readers quickly navigate to specific sections.
 
 ### Prerequisites
 
-List any prerequisites or dependencies that users need to have installed or set up before using your SQL queries. For example:
-
-- PostgreSQL database installed and configured.
-- COVID-19 dataset loaded into the database.
-- Any specific Python libraries or tools required for data visualization (if applicable).
+- PostgreSQL 15 installed and configured. pgAdmin 4.
+- COVID-19 dataset (csv) gotten from ______.
+- Microsoft Excel
 
 ### Getting Started
 
-Explain how users can get started with your project. Include step-by-step instructions for setting up the database and running your SQL queries. Provide code snippets or commands to help users understand the process.
+If you'd like to run my queries, you can download the datasets in the repository and perform your analysis on a Postgres server. After installing postgreSQL and pgAdmin, you'll have to create tables to house the datasets. The code for the table should look something like this
+```
+CREATE TABLE CovidDeaths (
+	iso_code VARCHAR,
+	continent VARCHAR,
+    ....);
+```
+Check out this sql file(link:) for more info. 
+NB: I changed the 'location' column to 'country' and the 'date' coloumn to 'event_date'.
+
+After that, populate the table by importing the dataset into it. Easy pesy ;)
 
 ### SQL Queries
 
 Provide a detailed explanation of the SQL queries you've written. Describe the purpose of each query, the tables it interacts with, and the expected output. Use code blocks to format your queries for clarity.
+Now let's get into a few queries. But first, an overview of the covid deaths table;
+```sql
+SELECT * 
+FROM coviddeaths
+WHERE continent IS NOT NULL
+ORDER BY 3,4
+```
+
+```picture of qurey result```
+
+Total cases vs total deaths
+This shows the chances of dying if you contact covid in Nigeria 
+```sql
+select country,event_date, total_cases, total_deaths, (total_deaths/total_cases)*100 death_percentage
+FROM coviddeaths
+WHERE country = 'Nigeria'
+ORDER BY 1,2
+```
+```picture of qurey result```
 
 ```sql
 -- Example SQL Query 1: Calculate total COVID-19 cases by country
@@ -49,17 +68,11 @@ ORDER BY event_date;
 
 Share the results or insights you obtained from running your SQL queries. Use tables, charts, or visualizations to present the data effectively.
 
-### Authors
-
-List the names of the individuals or contributors who worked on this project.
-
-### License
-
-Specify the license under which your project is distributed. If it's open-source, include details about the license.
 
 ### Acknowledgments
 
 Thank any sources of data, tools, or libraries you used in your analysis. Give credit to any individuals or organizations that inspired or supported your work.
+datacamp and alex the analyst
 
 ### Contact Information
 
@@ -73,5 +86,4 @@ Depending on the complexity and scope of your project, you can include additiona
 - FAQ: Frequently asked questions and their answers.
 - Future Work: Mention any future improvements or extensions you plan to make to the project.
 
-Remember that your README should be clear, concise, and user-friendly, helping others understand and use your work effectively.
 
