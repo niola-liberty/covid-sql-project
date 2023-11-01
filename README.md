@@ -9,7 +9,7 @@ A lot has happened since the covid outbreak in 2020, and ever since the vaccince
 ### Prerequisites
 
 - PostgreSQL 15 installed and configured. pgAdmin 4.
-- COVID-19 dataset (csv) gotten from ______.
+- COVID-19 dataset (csv) gotten from [Our World Data](https://ourworldindata.org/coronavirus).
 - Microsoft Excel
 
 ### Getting Started
