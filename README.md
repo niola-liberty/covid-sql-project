@@ -52,15 +52,19 @@ ORDER BY 1,2
 
 <u>This shows that the average rate of dying if you contact covid in Nigeria is 3%.</u>
 
-
+#### Global Numbers
+Now let's check out the death percentage globally
 ```sql
--- Example SQL Query 1: Calculate total COVID-19 cases by country
-SELECT country, SUM(total_cases) AS total_cases
-FROM covid_data
-GROUP BY country;
+SELECT event_date, SUM(new_cases) global_total_cases, SUM(new_deaths) global_total_deaths, sum(new_deaths)/sum(new_cases)*100 global_deaths_precentage
+FROM coviddeaths
+WHERE continent IS NOT NULL
+GROUP BY event_date
+ORDER BY 1,2
 ```
+![global death percent](https://github.com/niola-liberty/covid-sql-project/assets/82907562/35d90684-2a51-40a1-8c2b-ab4cc02c6187)
 
 ```sql
+
 -- Example SQL Query 2: Calculate the daily new cases
 SELECT country, event_date, new_cases
 FROM covid_data
