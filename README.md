@@ -21,7 +21,7 @@ CREATE TABLE CovidDeaths (
 	continent VARCHAR,
     ....);
 ```
-Check out this sql file(link:) for more info. 
+Check out this sql [file](https://github.com/niola-liberty/covid-sql-project/blob/main/tables%20import%20queries.sql) for more info. 
 NB: I changed the 'location' column to 'country' and the 'date' coloumn to 'event_date'.
 
 After that, populate the table by importing the dataset into it. Easy pesy ;)
