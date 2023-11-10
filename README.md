@@ -40,7 +40,7 @@ ORDER BY 3,4
 ![select all covid deaths](https://github.com/niola-liberty/covid-sql-project/assets/82907562/ba5ff080-31ee-483a-b223-11569415039c)
 
 
-Total cases vs total deaths
+#### Total cases vs total deaths
 This shows the chances of dying if you contact covid in Nigeria 
 ```sql
 select country,event_date, total_cases, total_deaths, (total_deaths/total_cases)*100 death_percentage
@@ -50,7 +50,7 @@ ORDER BY 1,2
 ```
 ![death percentages ng](https://github.com/niola-liberty/covid-sql-project/assets/82907562/4cb96eb0-f062-431a-a98d-18b1363d5759)
 
-This shows that the average rate of dying if you contact covid in Nigeria is 3%.
+<u>This shows that the average rate of dying if you contact covid in Nigeria is 3%.</u>
 
 
 ```sql
