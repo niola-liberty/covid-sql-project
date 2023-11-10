@@ -3,7 +3,7 @@
 
 ### Description
 
-A lot has happened since the covid outbreak in 2020, and ever since the vaccinces were out, the pandemic itself has become a thing of the past. This project is aims to gather information on the severity of the pandemic across the globe and especially Nigeria. We'll figure out chances of dying if you contact covid, death percentages, cummulative sum of vaccinated people verses the population and lots more.
+A lot has happened since the COVID outbreak in 2020, and ever since the vaccines were out, the pandemic itself has become a thing of the past. This project aims to gather information on the severity of the pandemic across the globe, especially in Nigeria. We'll figure out the chances of dying if you contact COVID, death percentages, the cumulative sum of vaccinated people versus the population and lots more.
 
 
 ### Prerequisites
@@ -48,6 +48,8 @@ WHERE country = 'Nigeria'
 ORDER BY 1,2
 ```
 ![death percentages ng](https://github.com/niola-liberty/covid-sql-project/assets/82907562/4cb96eb0-f062-431a-a98d-18b1363d5759)
+
+This shows that the average rate of dying if you contact covid in Nigeria is 3%.
 
 
 ```sql
