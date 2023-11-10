@@ -35,7 +35,9 @@ SELECT *
 FROM coviddeaths
 WHERE continent IS NOT NULL
 ORDER BY 3,4
-```![select all covid deaths](https://github.com/niola-liberty/covid-sql-project/assets/82907562/ba5ff080-31ee-483a-b223-11569415039c)
+```
+
+![select all covid deaths](https://github.com/niola-liberty/covid-sql-project/assets/82907562/ba5ff080-31ee-483a-b223-11569415039c)
 
 
 Total cases vs total deaths
