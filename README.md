@@ -35,9 +35,8 @@ SELECT *
 FROM coviddeaths
 WHERE continent IS NOT NULL
 ORDER BY 3,4
-```
+```![select all covid deaths](https://github.com/niola-liberty/covid-sql-project/assets/82907562/ba5ff080-31ee-483a-b223-11569415039c)
 
-```picture of qurey result```
 
 Total cases vs total deaths
 This shows the chances of dying if you contact covid in Nigeria 
