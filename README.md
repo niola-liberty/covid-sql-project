@@ -1,4 +1,4 @@
-![death vaccince join](https://github.com/niola-liberty/covid-sql-project/assets/82907562/d9cf273d-df7d-4da8-8adf-17e3b1de6a8b)# Sql Analysis On The Covid 19 World Data
+# Sql Analysis On The Covid 19 World Data
 
 
 ### Description
@@ -63,7 +63,7 @@ ORDER BY 1,2
 ```
 ![global death percent](https://github.com/niola-liberty/covid-sql-project/assets/82907562/35d90684-2a51-40a1-8c2b-ab4cc02c6187)
 
-The avarege covid deaths globally appears to be 4%.
+The average covid deaths globally appears to be 4%.
 
 #### Covid Vaccinations
 Let's take a look at the vaccination table.
@@ -85,6 +85,18 @@ JOIN covidVaccinations vac
 	  
 ```
 ![death vaccince join](https://github.com/niola-liberty/covid-sql-project/assets/82907562/34c8e163-6177-4b9d-8d4f-839d98eecb2e)
+
+#### Cummulative sum of vaccinated people in Nigeria
+```sql
+SELECT dea.continent, dea.country, dea.event_date, dea.population, vac.new_vaccinations
+, SUM(vac.new_vaccinations) OVER (PARTITION BY dea.country ORDER BY dea.country, dea.event_date) cummulative_vaccinated_sum
+FROM coviddeaths dea
+JOIN covidVaccinations vac
+	ON dea.country = vac.country
+	AND dea.event_date = vac.event_date
+WHERE dea.country= 'Nigeria'	
+ORDER BY 1,2	
+```
 
 
 ### Results
