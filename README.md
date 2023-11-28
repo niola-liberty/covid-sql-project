@@ -97,7 +97,28 @@ JOIN covidVaccinations vac
 WHERE dea.country= 'Nigeria'	
 ORDER BY 1,2	
 ```
+#### Total Population vs Vaccinations
+Let's find the total populations vs vaccinations.To do this we'd have to use a CTE as the cummulative_vaccinated_sum column doesn't exist in the table
 
+```sql
+WITH PopVsVac (Continent, Country, Date, Population, New_vaccinations, Total_Vaccinated)
+AS
+(
+    SELECT 
+        dea.continent, dea.country, dea.event_date, dea.population, vac.new_vaccinations,
+        SUM(vac.new_vaccinations) OVER (PARTITION BY dea.country ORDER BY dea.country, dea.event_date) AS cummulative_vaccinated_sum
+    FROM coviddeaths dea
+    JOIN covidVaccinations vac
+    ON dea.country = vac.country
+    AND dea.event_date = vac.event_date
+)
+SELECT *
+FROM coviddeaths
+WHERE continent IS NOT NULL
+ORDER BY 3, 4;
+
+```
+![pop vs vac cte](https://github.com/niola-liberty/covid-sql-project/assets/82907562/ed94ffd9-d538-405f-baa7-a2495cb6a8d0)
 
 ### Results
 
