@@ -120,26 +120,7 @@ ORDER BY 3, 4;
 ```
 ![pop vs vac cte](https://github.com/niola-liberty/covid-sql-project/assets/82907562/ed94ffd9-d538-405f-baa7-a2495cb6a8d0)
 
-### Results
-
-Share the results or insights you obtained from running your SQL queries. Use tables, charts, or visualizations to present the data effectively.
 
 
-### Acknowledgments
-
-Thank any sources of data, tools, or libraries you used in your analysis. Give credit to any individuals or organizations that inspired or supported your work.
-datacamp and alex the analyst
-
-### Contact Information
-
-Provide contact information or a way for users to reach out to you for questions or feedback related to your project.
-
-### Additional Sections (Optional)
-
-Depending on the complexity and scope of your project, you can include additional sections such as:
-
-- Troubleshooting: Common issues users might encounter and how to resolve them.
-- FAQ: Frequently asked questions and their answers.
-- Future Work: Mention any future improvements or extensions you plan to make to the project.
 
 
